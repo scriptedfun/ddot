@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<title>DDOT Bus Schedules - Routes</title>
+	</head>
+	<body>
+		<h1>Please choose a route.</h1>
+		<ul>
+		::foreach routes::
+			<li><a href="./?route=::id::">::shortName:: ::longName::</a></li>
+		::end::
+		</ul>
+	</body>
+</html>

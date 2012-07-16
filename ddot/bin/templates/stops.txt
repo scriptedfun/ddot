@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<title>DDOT Bus Schedules - Stops</title>
+	</head>
+	<body>
+		<h1>Please choose a stop.</h1>
+		<a href="./">back to routes</a>
+		<ul>
+		::foreach stopGroups::
+			<li>::name::<ul>
+				::foreach stopsArray::
+					<li><a href="./?route=::routeId::&stop=::id::">::name:: (Stop ID ::code::)</a></li>
+				::end::
+			</ul></li>
+		::end::
+		</ul>
+	</body>
+</html>

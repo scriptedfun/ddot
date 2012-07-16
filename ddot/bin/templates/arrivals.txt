@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<title>DDOT Bus Schedules - Arrivals</title>
+	</head>
+	<body>
+		<a href="./?route=::routeId::">back to stops</a>
+		::if (count == 0)::
+			<h1>No arrivals.</h1>
+		::else::
+			<h1>Arrivals for ::first.stop.name:: (Stop ID ::first.stop.code::)</h1>
+			<p>Negative times correspond to buses that have already passed by.</p>
+			<ol>
+			::foreach upcoming::
+				<li>::trip.tripHeadsign:: ::arrivalDeltaMinutes:: minutes (::if (!predicted)::not ::end::real-time)</li>
+			::end::
+			</ol>
+		::end::
+		<a href="./">start over</a>
+	</body>
+</html>
